@@ -1,0 +1,83 @@
+{
+  "name": "react-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/react": "^5.11.2",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.5",
+    "@mui/types": "^7.2.4",
+    "@mui/x-data-grid": "^5.17.2",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.3",
+    "@types/js-cookie": "^3.0.3",
+    "@types/node": "^20.4.6",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "axios": "^1.4.0",
+    "chart.js": "^3.9.1",
+    "eslint": "^8.46.0",
+    "formik": "^2.2.9",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^0.7.1",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.1.6",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "overrides": {
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "start": "PORT=5000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "Build a COMPLETE React Admin Dashboard App | React, Material UI, Data Grid, Light & Dark Mode",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "babel-loader": "^9.1.3"
+  }
+}

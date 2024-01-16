@@ -1,0 +1,79 @@
+import React from "react";
+
+    function AddCorrespondance({}) {
+      return ();
+    }
+  
+
+
+    function Addcorrespondance({handleOpen, isAdding, handleClose, style, handleFormSubmit, initialValues, checkoutSchema, handleSubmit, franchisorslist, event, newValue, setFieldValue, params, handleBlur, handleChange}) {
+      return (<Box>
+    <Fab color="primary" aria-label="add" onClick={handleOpen} // Calling your action function on click
+  sx={{
+    position: "absolute",
+    // Position it absolutely
+    bottom: "20px",
+    // 20px from the bottom
+    right: "350px",
+    // 20px from the right
+    backgroundColor: `${colors.blueAccent[100]}`
+  }}>
+        <AddIcon />
+      </Fab>
+
+      <Modal open={isAdding} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+        <Box sx={style}>
+          <Header title="ADD NEW RECORD" subtitle="Add a new communication history" />
+
+          <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={checkoutSchema}>
+            {({
+          values,
+          errors,
+          touched,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          setFieldValue
+        }) => <form onSubmit={handleSubmit}>
+                <Box display="grid" gap="30px" gridTemplateColumns="repeat(1, minmax(0, 1fr))" sx={{
+            width: "80%",
+            // Make modal wider
+            margin: "auto"
+          }}>
+                  <Autocomplete fullWidth options={franchisorslist} sx={{
+              gridColumn: "span 1"
+            }} onChange={(event, newValue) => {
+              setFieldValue("company_name", newValue ? newValue.label : "");
+            }} renderInput={params => <TextField {...params} variant="filled" type="text" label="Franchisor Name" onBlur={handleBlur} name="company_name" onChange={handleChange} />} />
+
+                  <TextField fullWidth variant="filled" type="date" label="Communication Date" onBlur={handleBlur} onChange={handleChange} name="communication_date" sx={{
+              gridColumn: "span 1"
+            }} />
+                  <TextField fullWidth variant="filled" type="text" label="Communication Summary" onBlur={handleBlur} onChange={handleChange} name="communication_summary" multiline rows={4} sx={{
+              gridColumn: "span 1"
+            }} />
+                  <TextField fullWidth variant="filled" type="text" label="Issues Raised" onBlur={handleBlur} onChange={handleChange} name="issues_raised" sx={{
+              gridColumn: "span 1"
+            }} />
+                  <TextField fullWidth variant="filled" type="text" label="Resolutions" onBlur={handleBlur} onChange={handleChange} name="resolutions" multiline rows={4} sx={{
+              gridColumn: "span 1"
+            }} />
+                  <FormControlLabel control={<Checkbox onChange={handleChange} name="contract_changes_agreed" />} label="Contract Changes Agreed" sx={{
+              gridColumn: "span 1"
+            }} />
+                </Box>
+                <Box display="flex" justifyContent="center" mt="20px">
+                  <Button type="submit" color="secondary" variant="contained" sx={{
+              width: "30%"
+            }}>
+                    Submit
+                  </Button>
+                </Box>
+              </form>}
+          </Formik>
+        </Box>
+      </Modal>
+    </Box>);
+    }
+  
+    
